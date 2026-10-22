@@ -35,18 +35,6 @@ jobs:
         - name: Setup Quarto
           uses: quarto-dev/quarto-actions/setup@v2
 
-        - name: Install Python
-          uses: actions/setup-python@v4
-          with:
-            python-version: "3.13.5"
-            cache: 'pip' # helpful to speed up future runs
-
-        - name: Install Python dependencies
-          run: python3 -m pip install jupyter pandas
-
-        - name: Generate JSON-LD head file
-          run: python generate_jsonld.py
-
         - name: Render Quarto
           # This generates the static files into the '_site' directory by default
           run: quarto render

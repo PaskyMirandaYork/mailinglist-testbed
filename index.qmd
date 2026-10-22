@@ -1,0 +1,201 @@
+---
+title: "Join the Mailing List"
+---
+
+# Sign Up To Our Mailing List
+
+Fields marked with \* are required.
+
+```{=html}
+<form id="signup" class="mb-3">
+
+  <div class="mb-3">
+    <label for="first_name" class="form-label">First name *</label>
+    <input id="first_name" name="first_name" type="text" class="form-control" required>
+  </div>
+
+  <div class="mb-3">
+    <label for="family_name" class="form-label">Family name *</label>
+    <input id="family_name" name="family_name" type="text" class="form-control" required>
+  </div>
+
+  <div class="mb-3">
+    <label for="institution" class="form-label">Institution or company where you work *</label>
+    <input id="institution" name="institution" type="text" class="form-control" required>
+  </div>
+
+  <div class="mb-3">
+    <label for="department" class="form-label">Department / area of research *</label>
+    <input id="department" name="department" type="text" class="form-control" required>
+  </div>
+
+  <fieldset class="mb-3" data-other-group="career_stage">
+    <legend class="fs-6">Which best describes your career stage *</legend>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" id="cs1" name="career_stage" value="Early career" required>
+      <label class="form-check-label" for="cs1">Early career</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" id="cs2" name="career_stage" value="Mid career">
+      <label class="form-check-label" for="cs2">Mid career</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" id="cs3" name="career_stage" value="Late career researcher">
+      <label class="form-check-label" for="cs3">Late career researcher</label>
+    </div>
+    <div class="form-check d-flex align-items-center gap-2">
+      <input class="form-check-input mt-0" type="radio" id="cs4" name="career_stage" value="Other">
+      <label class="form-check-label" for="cs4">Other:</label>
+      <input type="text" class="form-control form-control-sm w-auto" name="career_stage_other" aria-label="Other career stage" disabled>
+    </div>
+  </fieldset>
+
+  <fieldset class="mb-3" data-other-group="role">
+    <legend class="fs-6">Which best describes your role *</legend>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" id="r1" name="role" value="Post-graduate student (non-doctoral)" required>
+      <label class="form-check-label" for="r1">Post-graduate student (non-doctoral)</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" id="r2" name="role" value="Doctoral student">
+      <label class="form-check-label" for="r2">Doctoral student</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" id="r3" name="role" value="Researcher">
+      <label class="form-check-label" for="r3">Researcher</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" id="r4" name="role" value="Research Software Engineer">
+      <label class="form-check-label" for="r4">Research Software Engineer</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" id="r5" name="role" value="Bioinformatician">
+      <label class="form-check-label" for="r5">Bioinformatician</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" id="r6" name="role" value="Open Research Specialist">
+      <label class="form-check-label" for="r6">Open Research Specialist</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" id="r7" name="role" value="Research skills educator">
+      <label class="form-check-label" for="r7">Research skills educator</label>
+    </div>
+    <div class="form-check d-flex align-items-center gap-2">
+      <input class="form-check-input mt-0" type="radio" id="r8" name="role" value="Other">
+      <label class="form-check-label" for="r8">Other:</label>
+      <input type="text" class="form-control form-control-sm w-auto" name="role_other" aria-label="Other role" disabled>
+    </div>
+  </fieldset>
+
+  <div class="mb-3">
+    <label for="dtp" class="form-label">If you are completing a DTP/DLA studentship please indicate your programme/funding</label>
+    <input id="dtp" name="dtp_programme" type="text" class="form-control">
+  </div>
+
+  <div class="mb-3">
+    <label for="dtp_other" class="form-label">If other DTP please provide the name</label>
+    <input id="dtp_other" name="dtp_other" type="text" class="form-control">
+  </div>
+
+  <div class="mb-3">
+    <label for="research_area" class="form-label">Tell us more about your area of research and what training courses would be useful for you?</label>
+    <textarea id="research_area" name="research_area" rows="4" class="form-control"></textarea>
+  </div>
+
+  <fieldset class="mb-3" data-other-group="heard_about">
+    <legend class="fs-6">Where did you hear about the Catalyst? *</legend>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" id="h1" name="heard_about" value="UKRI Digital Research Skills Catalyst (website or mailing list)" required>
+      <label class="form-check-label" for="h1">UKRI Digital Research Skills Catalyst (website or mailing list)</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" id="h2" name="heard_about" value="Bluesky">
+      <label class="form-check-label" for="h2">Bluesky</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" id="h3" name="heard_about" value="Colleague / Supervisor / PI">
+      <label class="form-check-label" for="h3">Colleague / Supervisor / PI</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" id="h4" name="heard_about" value="Doctoral Landscape Training Network (website or email)">
+      <label class="form-check-label" for="h4">Doctoral Landscape Training Network (website or email)</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" id="h5" name="heard_about" value="DTP/DLA newsletter">
+      <label class="form-check-label" for="h5">DTP/DLA newsletter</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" id="h6" name="heard_about" value="Institutional newsletter">
+      <label class="form-check-label" for="h6">Institutional newsletter</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" id="h7" name="heard_about" value="LinkedIn">
+      <label class="form-check-label" for="h7">LinkedIn</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" id="h8" name="heard_about" value="Other">
+      <label class="form-check-label" for="h8">Other</label>
+    </div>
+  </fieldset>
+
+  <div class="mb-3">
+    <label for="heard_other" class="form-label">If other please provide details</label>
+    <input id="heard_other" name="heard_about_other" type="text" class="form-control">
+  </div>
+
+  <!-- Honeypot: hidden from people; bots tend to fill it in -->
+  <input name="website" type="text" tabindex="-1" autocomplete="off"
+         style="position:absolute;left:-9999px" aria-hidden="true">
+
+  <!-- Remove this block if you collect consent elsewhere -->
+  <div class="form-check mb-3">
+    <input id="consent" name="consent" type="checkbox" value="Yes" class="form-check-input" required>
+    <label for="consent" class="form-check-label">
+      I agree to be added to the mailing list and understand I can unsubscribe at any time. *
+    </label>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+  <p id="signup-status" role="status" class="mt-2"></p>
+</form>
+
+<script>
+// ---- EDIT THIS ----------------------------------------------------------
+const SCRIPT_URL = "PASTE_YOUR_APPS_SCRIPT_/exec_URL_HERE";
+// -------------------------------------------------------------------------
+
+const form = document.getElementById("signup");
+const statusEl = document.getElementById("signup-status");
+
+// "Other:" radios: enable and require the text box only when Other is chosen
+document.querySelectorAll("[data-other-group]").forEach((group) => {
+  const radios = group.querySelectorAll('input[type="radio"]');
+  const otherText = group.querySelector('input[type="text"]');
+  radios.forEach((r) => r.addEventListener("change", () => {
+    const isOther = group.querySelector('input[type="radio"][value="Other"]').checked;
+    otherText.disabled = !isOther;
+    otherText.required = isOther;
+    if (!isOther) otherText.value = "";
+  }));
+});
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  if (!form.checkValidity()) { form.reportValidity(); return; }
+
+  const btn = form.querySelector('button[type="submit"]');
+  btn.disabled = true;
+  statusEl.textContent = "Sending...";
+  try {
+    await fetch(SCRIPT_URL, { method: "POST", mode: "no-cors", body: new FormData(form) });
+    statusEl.textContent = "Thanks, your details have been sent.";
+    form.reset();
+    form.querySelectorAll('input[type="text"][disabled]').forEach((i) => (i.required = false));
+  } catch (err) {
+    statusEl.textContent = "Something went wrong. Please try again.";
+  } finally {
+    btn.disabled = false;
+  }
+});
+</script>
+```

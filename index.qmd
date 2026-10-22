@@ -160,8 +160,8 @@ Fields marked with \* are required.
 </form>
 
 <script>
-// ---- EDIT THIS ----------------------------------------------------------
-const SCRIPT_URL = "PASTE_YOUR_APPS_SCRIPT_/exec_URL_HERE";
+// ---- SHEETS SCRIPT URL HERE ---------------------------------------------
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw9eiwvEVRAgtUaVUjrr9UAG1SqEAl0yX7Cl3FX8_A58tOHDCC3qHMCD8mWuk8xwEl0/exec";
 // -------------------------------------------------------------------------
 
 const form = document.getElementById("signup");

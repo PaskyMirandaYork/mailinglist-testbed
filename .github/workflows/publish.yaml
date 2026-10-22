@@ -1,14 +1,8 @@
-# This is a basic workflow to help you get started with Actions
+name: Publish Quarto site to GitHub Pages
 
-name: Publish Quarto
-
-# Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: [ "main" ]
-
-  # Allows you to run this workflow manually from the Actions tab
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -17,66 +11,37 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "pages"
-  cancel-in-progress: false
+  group: pages
+  cancel-in-progress: true
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  build-deploy:
-      environment:
-        name: github-pages
-        url: ${{ steps.deployment.outputs.page_url }}
-      runs-on: ubuntu-latest
-      
-      steps:
-        - name: Checkout
-          uses: actions/checkout@v4
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
 
-        - name: Setup Quarto
-          uses: quarto-dev/quarto-actions/setup@v2
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
 
-        - name: Render Quarto
-          # This generates the static files into the '_site' directory by default
-          run: quarto render
+      - name: Render the Quarto project
+        run: quarto render
 
-        # NEW: Upload the '_site' directory as an artifact
-        - name: Upload artifact
-          uses: actions/upload-pages-artifact@v3
-          with:
-            path: '_site' # Ensure this matches your quarto output dir
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
 
-        # NEW: Deploy the artifact directly to GitHub Pages
-        - name: Deploy to GitHub Pages
-          id: deployment
-          uses: actions/deploy-pages@v4
+      - name: Upload the site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
 
-    # build-deploy:
-    #   runs-on: ubuntu-latest
-    #   permissions:
-    #     contents: write
-    #     pages: write
-    #     id-token: write
-    #   steps:
-    #     - name: Checkout
-    #       uses: actions/checkout@v4
-
-    #     - name: Setup Quarto
-    #       uses: quarto-dev/quarto-actions/setup@v2
-
-    #     - name: Install Python
-    #       uses: actions/setup-python@v4
-    #       with:
-    #         python-version: "3.13.5"
-          
-    #     - name: Install Python dependencies
-    #       run: python3 -m pip install jupyter pandas
-
-    #     - name: Render Quarto
-    #       run: quarto render
-
-    #     - name: Publish to GitHub Pages
-    #       uses: quarto-dev/quarto-actions/publish@v2
-    #       with:
-    #         target: gh-pages
-    #       env:
-    #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
